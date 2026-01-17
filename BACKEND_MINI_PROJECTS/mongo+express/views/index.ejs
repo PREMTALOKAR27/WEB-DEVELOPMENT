@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini chat system</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Chat System</h1>
+    <div class="outer">
+        <h3>All Chats</h3>
+        <form action="/chats/new" method="get">
+            <button>New Chat</button>
+        </form>
+        <% for(let chat of chats){ %>
+            <div class="card">
+                <p>form : <%= chat.from %></p>
+                <p>to : <%= chat.to %></p>
+                <div id="message" style="display: flex; align-items: center; gap: 10px;">
+                    <span>message : <%= chat.msg %></span>
+
+                    <form action="/chats/<%= chat._id %>/edit" method="get" style="margin-left: 50px;">
+                        <button type="submit">update</button>
+                    </form>
+                </div>
+
+                
+                <%= chat.created_at.toString().split(" ")[4]%><br>
+                <%= chat.created_at.toString().split(" ").slice(0,4).join("-") %><br>
+                <br>
+                <form action="/chats/<%=chat._id %>?_method=delete" method="post">
+                    <button >delete</button>
+                </form>
+            </div> 
+        <%} %>
+      
+    </div>
+</body>
+</html>

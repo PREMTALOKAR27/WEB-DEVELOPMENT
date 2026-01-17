@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post of id </title>
+</head>
+<body>
+    <form method="post" action="/posts">
+        <label for="username">username: </label>
+        <input type="text" name="username" placeholder="username" id="username">
+        <br><br>
+        <label for="image">image: </label>
+        <input type="url" name="image" placeholder="enter url" id="image">
+        <br><br>
+        <label for="caption" name="caption">caption: </label>
+        <textarea name="caption" id="caption"></textarea>
+        <br><br>
+        <label for="likes">likes : </label>
+        <input type="text" name="likes" placeholder="likes" id="likes">
+
+        <br><br><br>
+        <button type="submit">POST</button>
+    </form>
+</body>
+</html>

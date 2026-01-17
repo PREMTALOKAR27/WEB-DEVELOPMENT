@@ -1,0 +1,29 @@
+body{
+    margin: 20px;
+    background-color: rgb(188, 192, 174);
+
+}
+h1{
+    text-align: center;
+
+}
+h3{
+    text-align: center;
+    color: red;
+}
+.outer{
+    background-color: rgb(238, 238, 227);
+    border-radius: 30px;
+
+}
+.card{
+    background-color: rgb(173, 209, 209);
+    margin-top: 15px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#message{
+    background-color: rgb(226, 255, 255);
+}

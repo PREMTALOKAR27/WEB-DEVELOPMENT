@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>full detail</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <% if (!post) { %>
+        <h1>Post not found</h1>
+    <% } else { %>
+        <div class="fullcard">
+         <h1>@<%= post.username %></h1>
+        <img class="fullimg" src="<%= post.image %>" alt="post image">
+        <p>CAPTION: <%= post.caption %></p>
+        <p>LIKES:<%= post.likes %></p>
+        </div>
+        
+    <% } %>
+</body>
+</html>

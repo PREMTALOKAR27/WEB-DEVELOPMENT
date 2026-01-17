@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main page </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>INSTAGRAM</h1>
+    <a href="http://localhost:8080/posts/new">Create new post</a>
+    <% for(let post of posts) {%>
+        <div class="card">
+        <h2>username: @<%= post.username %></h2>
+        <img src=<%= post.image %>>
+        <div class="buttons">
+            <form method="get" action="/posts/<%= post.id %>">
+                <button>view details</button>
+            </form>
+
+            
+
+            <form method="get" action="/posts/edit/<%=post.id%>">
+                <button type="submit">Edit</button>
+            </form>
+            
+            <form method="POST" action="/posts/<%=post.id%>?_method=DELETE">
+                <button type="submit">Delete post</button>
+            </form>
+        </div>
+        
+
+
+    </div>
+
+        
+    <% } %>
+    
+</body>
+</html>
